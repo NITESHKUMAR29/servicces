@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
 //                startService(intent)
                 startService(Intent(this@MainActivity, MyServices::class.java))
             }
+            stopServices.setOnClickListener {
+                val intent=Intent(this@MainActivity,MyServices::class.java)
+                stopService(intent)
+            }
         }
 
     }
